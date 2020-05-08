@@ -3,7 +3,12 @@
 <h1>Статьи</h1>
 <ul class="list-group">
     {% for article in our_articles %}
-    <li class="list-group-item"><a href="article/{{article.id}}"> {{article.title}}</a></li>
+    <li class="list-group-item"><a
+            href="/article/?v1={{article.id}}&v2={{article.text}}&v3={{article.authors}}&v4={{article.title}}">
+        {{article.title}}</a></li>
     {% endfor %}
 </ul>
+<a href="/new_article">
+    <button type="button" class="btn btn-primary">Создать статью</button>
+</a>
 {% endblock %}

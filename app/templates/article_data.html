@@ -1,5 +1,16 @@
 {% extends 'appearance.html' %}
 
 {% block body %}
-    <h1>{{id}}</h1>
+<div class="container text-center">
+    <p>
+    <h1>Авторы &#8212 {{author}}</h1></p>
+    <p>
+    <h1>Название &#8212 {{title}}</h1></p>
+    <p>
+    <h3>{{text}}</h3></p>
+    <a href="/edit_article?id={{id}}&text={{text}}&author={{authors}}&title={{title}}"
+       method="post">
+        <button type="button" class="btn btn-primary">Редактировать</button>
+    </a>
+</div>
 {% endblock %}
