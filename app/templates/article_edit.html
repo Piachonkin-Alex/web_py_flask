@@ -1,14 +1,14 @@
 {% extends 'appearance.html' %}
 
 {% block body %}
-<form action="/article?id={{id}}" method="post" id="myform">
+<form class="text-center" action="/article?id={{id}}" method="post" id="myform">
     <label for="AuthorName">Author name:</label><br>
     <input value= "{{authors}}" type="text" id="AuthorName" name="AuthorName"><br>
     <label for="ArticleName">Article name:</label><br>
     <input value="{{title}}" type="text" id="ArticleName" name="ArticleName">
     <br>
     <br>
-    <textarea name="article" id="text"  form="myform" rows="4" cols="50">{{text}}
+    <textarea name="article" id="text"  form="myform" rows="20" cols="150">{{text}}
          </textarea>
     <br/>
     <input type="submit">
